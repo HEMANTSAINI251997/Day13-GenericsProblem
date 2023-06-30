@@ -8,8 +8,8 @@ namespace GenericsProblems
 {
     public class Maximum
     {
-        public int maxdata=0;
-        public  static int Checkmax( int data_one ,int  data_two,int  data_three)
+        public double maxdata=0;
+        public  static double Checkmax( double data_one ,double  data_two,double  data_three)
         {
             if (data_one.CompareTo(data_two)>=0 && data_one.CompareTo(data_three) >=0 )
             {

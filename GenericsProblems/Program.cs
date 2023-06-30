@@ -11,13 +11,13 @@ namespace GenericsProblems
         static void Main(string[] args)
         {
             Console.WriteLine("Enter the first number ");
-            int num_one = Convert.ToInt32(Console.ReadLine());
+            double num_one = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Enter the second number");
-            int num_two = Convert.ToInt32(Console.ReadLine());
+            double num_two = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Enter the third number");
-            int num_three = Convert.ToInt32(Console.ReadLine());
+            double num_three = Convert.ToDouble(Console.ReadLine());
 
-            int val = Maximum.Checkmax(num_one, num_two, num_three);
+            double val = Maximum.Checkmax(num_one, num_two, num_three);
             Console.WriteLine($"Maximum Number {num_one} , {num_two} & {num_three} = {val}");
         }
     }
