@@ -10,14 +10,17 @@ namespace GenericsProblems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the first number ");
-            double num_one = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter the second number");
-            double num_two = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter the third number");
-            double num_three = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the first words ");
+            string num_one = Console.ReadLine();
+            Console.WriteLine("Enter the second words");
+            string num_two = Console.ReadLine();
+            Console.WriteLine("Enter the third words");
+            string num_three =Console.ReadLine();
 
-            double val = Maximum.Checkmax(num_one, num_two, num_three);
+            Maximum maximum = new Maximum();
+
+
+            string val = maximum.Checkmax(num_one, num_two, num_three);
             Console.WriteLine($"Maximum Number {num_one} , {num_two} & {num_three} = {val}");
         }
     }
