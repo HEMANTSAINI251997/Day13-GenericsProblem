@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace GenericsProblems
 {
-    public class Maximum
+    public class Maximum 
+
     {
-         public string Checkmax( string data_one ,string  data_two,string  data_three)
+         public T Checkmax<T>( T data_one ,T  data_two,T  data_three) where T : IComparable
         {
             if (data_one.CompareTo(data_two)>=0 && data_one.CompareTo(data_three)>=0 )
             {
