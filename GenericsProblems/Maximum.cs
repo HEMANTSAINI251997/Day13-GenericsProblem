@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace GenericsProblems
 {
-    public class Maximum 
+    public class Maximum<T> where T: IComparable 
 
     {
-         public T Checkmax<T>( T data_one ,T  data_two,T  data_three) where T : IComparable
+        public T data_one;
+        public T data_two;
+        public T data_three;
+        public Maximum(T data_one, T data_two, T data_three)
+        {
+            this.data_one = data_one;
+            this.data_two = data_two;
+            this.data_three = data_three;
+        }
+         public static T Checkmax( T data_one ,T  data_two,T  data_three) 
         {
             if (data_one.CompareTo(data_two)>=0 && data_one.CompareTo(data_three)>=0 )
             {
@@ -25,6 +34,11 @@ namespace GenericsProblems
             }
             return data_one;
 
+        }
+        public T MaxMethod()
+        {
+            T result = Maximum<T>.Checkmax(this.data_one, this.data_two, this.data_three);
+            return result;
         }
     }
 }
